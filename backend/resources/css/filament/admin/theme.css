@@ -1,0 +1,142 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+@font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url('/brand/fonts/CabinetGrotesk-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url('/brand/fonts/CabinetGrotesk-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url('/brand/fonts/CabinetGrotesk-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Serif';
+    src: url('/brand/fonts/InstrumentSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Instrument Serif';
+    src: url('/brand/fonts/InstrumentSerif-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@theme {
+    --font-sans: 'Cabinet Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+
+    --color-redeast-charcoal: #363636;
+    --color-redeast-gray: #9c9c9c;
+    --color-redeast-red: #ed2839;
+    --color-redeast-paper: #f7f7f5;
+    --color-redeast-ink: #111111;
+}
+
+.fi-sidebar {
+    --sidebar-bg: var(--color-redeast-charcoal);
+}
+
+.fi-header-heading,
+.fi-page-header-heading,
+.fi-simple-header-heading,
+.fi-section-header-heading {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+.fi-btn,
+.fi-input,
+.fi-select,
+.fi-ta,
+.fi-sidebar,
+.fi-topbar {
+    font-family: var(--font-sans);
+}
+
+/* Dashboard layout and responsive polish */
+.fi-main {
+    min-width: 0;
+}
+
+.fi-page {
+    width: 100%;
+    max-width: 1600px;
+    margin-inline: auto;
+}
+
+.fi-header {
+    gap: 1rem;
+}
+
+.fi-header-actions {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.dark .fi-sidebar {
+    --sidebar-bg: #171717;
+}
+
+.fi-wi-stats-overview-stat-value {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+}
+
+.fi-ta-text {
+    white-space: normal;
+}
+
+@media (max-width: 1024px) {
+    .fi-page {
+        padding-inline: 1rem;
+    }
+
+    .fi-header {
+        align-items: flex-start;
+    }
+
+    .fi-ta-ctn {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .fi-header-actions {
+        width: 100%;
+    }
+
+    .fi-header-actions .fi-btn {
+        flex: 1 1 auto;
+    }
+
+    .fi-page-header-main-ctn {
+        gap: 0.75rem;
+    }
+
+    .fi-ta-table {
+        min-width: 640px;
+    }
+}

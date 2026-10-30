@@ -1,0 +1,52 @@
+<?php
+
+namespace App\Filament\Resources\Categories\Tables;
+
+use App\Models\Category;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+
+class CategoriesTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                ImageColumn::make('image_url')
+                    ->label('Image')
+                    ->getStateUsing(fn (Category $record) => $record->resolvedImageUrl())
+                    ->height(36),
+                TextColumn::make('parent.name')
+                    ->label('Parent')
+                    ->searchable(),
+                TextColumn::make('name')
+                    ->searchable()
+                    ->sortable(),
+                TextColumn::make('slug')
+                    ->searchable(),
+                IconColumn::make('is_active')
+                    ->boolean(),
+                TextColumn::make('sort_order')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->defaultSort('sort_order')
+            ->recordActions([
+                EditAction::make(),
+            ])
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                ]),
+            ]);
+    }
+}

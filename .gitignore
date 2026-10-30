@@ -4,6 +4,7 @@
 *.pyc
 *.swp
 .DS_Store
+Thumbs.db
 .atom/
 .build/
 .buildlog/
@@ -27,11 +28,20 @@ migrate_working_dir/
 **/doc/api/
 **/ios/Flutter/.last_build_id
 .dart_tool/
+.flutter-plugins
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
-/build/
+/build
+/local.mk
 /coverage/
+/backend/vendor
+/backend/node_modules
+/backend/.env
+/backend/.env.*
+!/backend/.env.example
+/backend/database/*.sqlite
+/backend/database/*.sqlite-*
 
 # Symbolication related
 app.*.symbols

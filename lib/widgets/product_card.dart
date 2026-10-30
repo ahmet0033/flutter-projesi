@@ -18,118 +18,157 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final category = product.categoryName ?? product.brandName;
+
     return Material(
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(16),
+      color: theme.colorScheme.surface,
+      borderRadius: BorderRadius.circular(18),
       clipBehavior: Clip.antiAlias,
-      elevation: 0,
-      surfaceTintColor: Colors.transparent,
-      shadowColor: Colors.black.withValues(alpha: 0.08),
       child: InkWell(
         onTap: onTap,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                color: const Color(0xFFF8F8FA),
-                child: Stack(
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(18),
+            border: Border.all(
+              color: theme.colorScheme.outline.withValues(alpha: 0.2),
+            ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  color: theme.colorScheme.surfaceContainerHighest,
+                  child: Stack(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Center(
+                          child: Image.network(
+                            product.imageUrl,
+                            fit: BoxFit.contain,
+                            errorBuilder: (_, _, _) => Icon(
+                              Icons.inventory_2_outlined,
+                              size: 40,
+                              color: theme.colorScheme.outline,
+                            ),
+                          ),
+                        ),
+                      ),
+                      if (product.isFeatured)
+                        Positioned(
+                          left: 10,
+                          top: 10,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8,
+                              vertical: 3,
+                            ),
+                            decoration: BoxDecoration(
+                              color: theme.colorScheme.secondary,
+                              borderRadius: BorderRadius.circular(999),
+                            ),
+                            child: Text(
+                              'Yeni',
+                              style: theme.textTheme.labelSmall?.copyWith(
+                                color: theme.colorScheme.onSecondary,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Image.network(
-                        product.image,
-                        fit: BoxFit.contain,
-                        webHtmlElementStrategy: WebHtmlElementStrategy.prefer,
-                        errorBuilder: (_, _, _) => const Icon(
-                          Icons.phone_iphone,
-                          size: 40,
-                          color: Color(0xFFCCCCCC),
+                    if (category != null)
+                      Text(
+                        category.toUpperCase(),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: theme.textTheme.labelSmall?.copyWith(
+                          color: theme.colorScheme.outline,
+                          letterSpacing: 0.8,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    const SizedBox(height: 4),
+                    Text(
+                      product.name,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: theme.textTheme.titleMedium,
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      product.tagline,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: theme.colorScheme.outline,
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            product.price,
+                            style: theme.textTheme.titleLarge,
+                          ),
+                        ),
+                        if (product.rating != null)
+                          Icon(
+                            Icons.star,
+                            size: 14,
+                            color: theme.colorScheme.secondary,
+                          ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 34,
+                      child: FilledButton(
+                        onPressed: onAddToCart,
+                        style: FilledButton.styleFrom(
+                          backgroundColor: theme.colorScheme.primary,
+                          foregroundColor: theme.colorScheme.onPrimary,
+                          padding: EdgeInsets.zero,
+                          textStyle: const TextStyle(
+                            fontFamily: 'CabinetGrotesk',
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              inCart ? Icons.check : Icons.add_shopping_cart,
+                              size: 14,
+                            ),
+                            const SizedBox(width: 5),
+                            Text(inCart ? 'Eklendi' : 'Sepete Ekle'),
+                          ],
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 10, 12, 0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    product.name,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 13,
-                      height: 1.2,
-                      color: Color(0xFF1D1D1F),
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  const SizedBox(height: 2),
-                  Text(
-                    product.tagline,
-                    style: TextStyle(
-                      fontSize: 11,
-                      color: Colors.grey.shade500,
-                      height: 1.3,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    '${product.currency} ${product.price}',
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 15,
-                      color: Color(0xFF1D1D1F),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 6, 12, 10),
-              child: SizedBox(
-                width: double.infinity,
-                height: 30,
-                child: FilledButton.tonal(
-                  onPressed: onAddToCart,
-                  style: FilledButton.styleFrom(
-                    padding: EdgeInsets.zero,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    backgroundColor: inCart
-                        ? const Color(0xFF1D1D1F)
-                        : const Color(0xFFF2F2F7),
-                    foregroundColor: inCart
-                        ? Colors.white
-                        : const Color(0xFF1D1D1F),
-                    textStyle: const TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        inCart ? Icons.check : Icons.add_shopping_cart,
-                        size: 13,
-                      ),
-                      const SizedBox(width: 4),
-                      Text(inCart ? 'Eklendi' : 'Sepete Ekle'),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

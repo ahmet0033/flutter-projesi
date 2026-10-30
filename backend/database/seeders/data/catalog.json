@@ -1,0 +1,425 @@
+{
+  "categories": [
+    {
+      "name": "Phones",
+      "slug": "phones",
+      "description": "RedEast phones for everyday and pro use",
+      "sort_order": 1
+    },
+    {
+      "name": "Computers",
+      "slug": "computers",
+      "description": "Notebooks, desktops and docks",
+      "sort_order": 2
+    },
+    {
+      "name": "Tablets",
+      "slug": "tablets",
+      "description": "Slate tablets for work and play",
+      "sort_order": 3
+    },
+    {
+      "name": "Audio",
+      "slug": "audio",
+      "description": "Buds and headphones",
+      "sort_order": 4
+    },
+    {
+      "name": "Wearables",
+      "slug": "wearables",
+      "description": "Orbit watches",
+      "sort_order": 5
+    },
+    {
+      "name": "Smart Home",
+      "slug": "smart-home",
+      "description": "Halo speakers",
+      "sort_order": 6
+    },
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "description": "Chargers and stands",
+      "sort_order": 7
+    }
+  ],
+  "brands": [
+    {
+      "name": "RedEast",
+      "slug": "red-east",
+      "description": "RedEast demo products"
+    }
+  ],
+  "products": [
+    {
+      "name": "RedEast Nova X",
+      "slug": "nova-x",
+      "tagline": "Everyday flagship.",
+      "description": "A balanced flagship with a bright display, all-day battery and a clean RedEast experience. Fast charging, dual cameras and a lightweight body.",
+      "price_cents": 89900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-nova-x/1200/1200",
+      "specs": {
+        "display": "6.4\" OLED",
+        "camera": "48MP + 12MP",
+        "battery": "5,000 mAh",
+        "chip": "Nova A2"
+      },
+      "category_slug": "phones",
+      "brand_slug": "red-east",
+      "is_featured": true,
+      "stock": 14
+    },
+    {
+      "name": "RedEast Nova X Pro",
+      "slug": "nova-x-pro",
+      "tagline": "Pro camera. Pro display.",
+      "description": "The Nova X Pro adds a telephoto camera, a brighter LTPO display and faster charging for demanding days.",
+      "price_cents": 119900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-nova-x-pro/1200/1200",
+      "specs": {
+        "display": "6.7\" LTPO",
+        "camera": "48MP + 12MP + 8MP",
+        "battery": "5,200 mAh",
+        "chip": "Nova A3"
+      },
+      "category_slug": "phones",
+      "brand_slug": "red-east",
+      "is_featured": true,
+      "stock": 21
+    },
+    {
+      "name": "RedEast Nova Air",
+      "slug": "nova-air",
+      "tagline": "Thin, light, capable.",
+      "description": "A slim phone with a large display and reliable battery life for daily use.",
+      "price_cents": 69900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-nova-air/1200/1200",
+      "specs": {
+        "display": "6.6\" OLED",
+        "camera": "50MP",
+        "battery": "4,800 mAh",
+        "chip": "Nova A1"
+      },
+      "category_slug": "phones",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 28
+    },
+    {
+      "name": "RedEast Nova Mini",
+      "slug": "nova-mini",
+      "tagline": "Small phone, full experience.",
+      "description": "A compact phone that keeps the core RedEast experience in a pocketable size.",
+      "price_cents": 49900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-nova-mini/1200/1200",
+      "specs": {
+        "display": "5.8\" OLED",
+        "camera": "12MP",
+        "battery": "3,900 mAh",
+        "chip": "Nova A1"
+      },
+      "category_slug": "phones",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 35
+    },
+    {
+      "name": "RedEast Atlas 14",
+      "slug": "atlas-14",
+      "tagline": "Portable power.",
+      "description": "A 14-inch notebook with a sharp display, quiet cooling and long battery life.",
+      "price_cents": 139900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-atlas-14/1200/1200",
+      "specs": {
+        "display": "14\" 2.8K",
+        "memory": "16GB",
+        "storage": "512GB SSD",
+        "chip": "Atlas M2"
+      },
+      "category_slug": "computers",
+      "brand_slug": "red-east",
+      "is_featured": true,
+      "stock": 42
+    },
+    {
+      "name": "RedEast Atlas 16 Pro",
+      "slug": "atlas-16-pro",
+      "tagline": "Built for heavy work.",
+      "description": "A 16-inch pro notebook for editing, compiling and creative workloads.",
+      "price_cents": 219900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-atlas-16-pro/1200/1200",
+      "specs": {
+        "display": "16\" 3.2K",
+        "memory": "32GB",
+        "storage": "1TB SSD",
+        "chip": "Atlas M3 Pro"
+      },
+      "category_slug": "computers",
+      "brand_slug": "red-east",
+      "is_featured": true,
+      "stock": 14
+    },
+    {
+      "name": "RedEast Atlas Air",
+      "slug": "atlas-air",
+      "tagline": "Light as air.",
+      "description": "A fanless, ultra-portable notebook for writing, browsing and travel.",
+      "price_cents": 109900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-atlas-air/1200/1200",
+      "specs": {
+        "display": "13.6\" 2.5K",
+        "memory": "16GB",
+        "storage": "512GB SSD",
+        "chip": "Atlas M2"
+      },
+      "category_slug": "computers",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 21
+    },
+    {
+      "name": "RedEast Atlas Dock",
+      "slug": "atlas-dock",
+      "tagline": "One cable. More ports.",
+      "description": "A compact USB-C dock with HDMI, Ethernet, SD and USB ports.",
+      "price_cents": 19900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-atlas-dock/1200/1200",
+      "specs": {
+        "ports": "HDMI, Ethernet, SD, USB-A",
+        "power": "100W passthrough",
+        "material": "Aluminum"
+      },
+      "category_slug": "computers",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 28
+    },
+    {
+      "name": "RedEast Slate 11",
+      "slug": "slate-11",
+      "tagline": "A big canvas.",
+      "description": "An 11-inch tablet for notes, media and lightweight work.",
+      "price_cents": 59900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-slate-11/1200/1200",
+      "specs": {
+        "display": "11\" 2.5K",
+        "memory": "8GB",
+        "storage": "128GB",
+        "battery": "8,000 mAh"
+      },
+      "category_slug": "tablets",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 35
+    },
+    {
+      "name": "RedEast Slate Mini",
+      "slug": "slate-mini",
+      "tagline": "Take it anywhere.",
+      "description": "A compact tablet for reading, notes and travel.",
+      "price_cents": 39900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-slate-mini/1200/1200",
+      "specs": {
+        "display": "8.7\" 2K",
+        "memory": "6GB",
+        "storage": "64GB",
+        "battery": "5,000 mAh"
+      },
+      "category_slug": "tablets",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 42
+    },
+    {
+      "name": "RedEast Slate Pro",
+      "slug": "slate-pro",
+      "tagline": "Create on the go.",
+      "description": "A pro tablet with a high-refresh display and stylus support.",
+      "price_cents": 89900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-slate-pro/1200/1200",
+      "specs": {
+        "display": "12.9\" 120Hz",
+        "memory": "12GB",
+        "storage": "256GB",
+        "battery": "10,000 mAh"
+      },
+      "category_slug": "tablets",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 14
+    },
+    {
+      "name": "RedEast Pulse Buds",
+      "slug": "pulse-buds",
+      "tagline": "Clear sound, all day.",
+      "description": "Wireless earbuds with active noise cancellation and a pocketable case.",
+      "price_cents": 14900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-pulse-buds/1200/1200",
+      "specs": {
+        "battery": "6h + 24h case",
+        "anc": "Yes",
+        "water": "IPX4"
+      },
+      "category_slug": "audio",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 21
+    },
+    {
+      "name": "RedEast Pulse Buds Pro",
+      "slug": "pulse-buds-pro",
+      "tagline": "Silence the noise.",
+      "description": "Pro earbuds with adaptive noise cancellation, spatial audio and wireless charging.",
+      "price_cents": 24900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-pulse-buds-pro/1200/1200",
+      "specs": {
+        "battery": "7h + 30h case",
+        "anc": "Adaptive",
+        "water": "IPX5"
+      },
+      "category_slug": "audio",
+      "brand_slug": "red-east",
+      "is_featured": true,
+      "stock": 28
+    },
+    {
+      "name": "RedEast Pulse Headphones",
+      "slug": "pulse-headphones",
+      "tagline": "Immersive over-ear sound.",
+      "description": "Comfortable over-ear headphones with long battery life and multipoint pairing.",
+      "price_cents": 34900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-pulse-headphones/1200/1200",
+      "specs": {
+        "battery": "40h",
+        "anc": "Yes",
+        "drivers": "40mm"
+      },
+      "category_slug": "audio",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 35
+    },
+    {
+      "name": "RedEast Orbit Watch",
+      "slug": "orbit-watch",
+      "tagline": "Your day, on your wrist.",
+      "description": "A lightweight smartwatch with health tracking, notifications and 7-day battery.",
+      "price_cents": 29900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-orbit-watch/1200/1200",
+      "specs": {
+        "display": "1.8\" AMOLED",
+        "battery": "7 days",
+        "water": "5 ATM"
+      },
+      "category_slug": "wearables",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 42
+    },
+    {
+      "name": "RedEast Orbit Watch Pro",
+      "slug": "orbit-watch-pro",
+      "tagline": "Built for the outdoors.",
+      "description": "A rugged smartwatch with dual-band GPS, larger battery and advanced sensors.",
+      "price_cents": 44900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-orbit-watch-pro/1200/1200",
+      "specs": {
+        "display": "1.9\" AMOLED",
+        "battery": "14 days",
+        "water": "10 ATM"
+      },
+      "category_slug": "wearables",
+      "brand_slug": "red-east",
+      "is_featured": true,
+      "stock": 14
+    },
+    {
+      "name": "RedEast Halo Speaker",
+      "slug": "halo-speaker",
+      "tagline": "Room-filling sound.",
+      "description": "A smart speaker with rich sound, voice control and multi-room audio.",
+      "price_cents": 19900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-halo-speaker/1200/1200",
+      "specs": {
+        "drivers": "2x 20mm + woofer",
+        "connectivity": "Wi-Fi, Bluetooth",
+        "power": "30W"
+      },
+      "category_slug": "smart-home",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 21
+    },
+    {
+      "name": "RedEast Halo Mini",
+      "slug": "halo-mini",
+      "tagline": "Small speaker, big sound.",
+      "description": "A compact smart speaker for desks, kitchens and bedside tables.",
+      "price_cents": 9900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-halo-mini/1200/1200",
+      "specs": {
+        "drivers": "1x full-range",
+        "connectivity": "Wi-Fi, Bluetooth",
+        "power": "10W"
+      },
+      "category_slug": "smart-home",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 28
+    },
+    {
+      "name": "RedEast Flux Charger",
+      "slug": "flux-charger",
+      "tagline": "Fast, compact charging.",
+      "description": "A 65W GaN charger with two USB-C ports and one USB-A port.",
+      "price_cents": 5900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-flux-charger/1200/1200",
+      "specs": {
+        "power": "65W",
+        "ports": "2x USB-C, 1x USB-A",
+        "material": "GaN"
+      },
+      "category_slug": "accessories",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 35
+    },
+    {
+      "name": "RedEast Flux Stand",
+      "slug": "flux-stand",
+      "tagline": "A better angle.",
+      "description": "An adjustable aluminum stand for phones and tablets.",
+      "price_cents": 7900,
+      "currency": "USD",
+      "image_url": "https://picsum.photos/seed/redeast-flux-stand/1200/1200",
+      "specs": {
+        "material": "Aluminum",
+        "adjustable": "Yes",
+        "compatibility": "Phones and tablets"
+      },
+      "category_slug": "accessories",
+      "brand_slug": "red-east",
+      "is_featured": false,
+      "stock": 42
+    }
+  ]
+}
